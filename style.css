@@ -10,6 +10,19 @@ body {
 * {
 	position: relative;
 	color: #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+.kicker {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 400;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
 }
 
 main {
@@ -18,12 +31,13 @@ main {
 }
 
 /* two col */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 	main {
 		display: flex;
+		align-items: center;
 	}
 	.content {
-		margin-left: 2rem;
+		margin-left: 3rem;
 	}
 }
 
@@ -31,4 +45,33 @@ main {
 	flex: 0 0 350px;
 	background-color: rgba(0,0,0,0.5);
 	box-shadow: 0 1px 1.5rem rgba(0,0,0,0.5);
+}
+
+.content {
+	text-shadow: 0 1px 0.5em rgba(0,0,0,0.25);
+}
+
+.content ul {
+	margin-top: 2rem;
+	padding-left: 0;
+	list-style: none;
+}
+
+.content li:not(:last-child) {
+	margin-bottom: 0.25rem;
+	padding-bottom: 0.5rem;
+}
+
+.content a {
+	font-size: 1.25rem;
+	line-height: 1.5;
+	font-weight: bold;
+	display: block;
+	opacity: 0.75;
+	transition: opacity 0.3s ease-out;
+}
+
+.content a:hover,
+.content a:focus {
+	opacity: 1;
 }
